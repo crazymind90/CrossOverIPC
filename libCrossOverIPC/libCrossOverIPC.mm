@@ -176,28 +176,6 @@ static void distributedCenterEvent(CFNotificationCenterRef center, void *observe
 }
 
 
--(void) registerForMessageName:(NSString *)msgName target:(id)target selector:(SEL)sel {
-    NSString *selStr = NSStringFromSelector(sel);
-    [self.registeredTargets setObject:@[target,NSStringFromSelector(sel)] forKey:SWF(@"%@~%@",self.serviceName,msgName)];
-}
-
-
--(void) _sendMessageName:(NSString *)msgName userInfo:(NSDictionary *)userInfo toServiceNamed:(NSString *)serviceName {
-    
-    if (!userInfo)
-    userInfo = @{};
- 
-    CFMutableDictionaryRef dictionary = convertNSDictToCFDict(@{msgName:userInfo,@"isWithReply":@"NO",@"msgName":msgName});
-    CFNotificationCenterPostNotificationWithOptions(
-             CFNotificationCenterGetDistributedCenter(),
-             (CFStringRef)serviceName,
-             NULL,
-             dictionary,
-             kCFNotificationPostToAllSessions | kCFNotificationDeliverImmediately);
-
-    CFRelease(dictionary);
-}
-
 #pragma  --------------------------------------------- Handlers ----------------------------------------------------
 
   
@@ -246,10 +224,8 @@ static void distributedCenterEvent(CFNotificationCenterRef center, void *observe
 #pragma  --------------------------------------------- Extras ----------------------------------------------------
 
 
--(void) callVoidServiceNameTarget:(NSString *)serviceKey userInfo:(NSDictionary *)dict {
-    id target = self.registeredTargets[serviceKey][0];
-    SEL selector = NSSelectorFromString(self.registeredTargets[serviceKey][1]);
-	[target performSelector:selector withObject:[self purifyClientName:serviceKey] withObject:dict];
+-(void) registerForMessageName:(NSString *)msgName target:(id)target selector:(SEL)sel {
+    [self.registeredTargets setObject:@[target,NSStringFromSelector(sel)] forKey:SWF(@"%@~%@",self.serviceName,msgName)];
 }
 
 -(NSDictionary *) callServiceNameTarget:(NSString *)serviceKey userInfo:(NSDictionary *)dict {
