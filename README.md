@@ -1,6 +1,7 @@
 <div align="center">
 	
-  <h1>⚡ CrossOverIPC</h1>
+  <img src="https://crazy90.com/Crazy/Files/HighVoltage.png" alt="High Voltage" width="65" height="65">
+  <h1>CrossOverIPC</h1>
   <br>
   <img src="https://img.shields.io/badge/Dopamine-iOS%2015%20%26%2016-38761d.svg" alt="Dopamine">
   <img src="https://img.shields.io/badge/Roothide-iOS%2015%20%26%2016-4600f8.svg" alt="Roothide">
