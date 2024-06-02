@@ -1,0 +1,7 @@
+{
+	Filter = {
+		Bundles = (
+			"com.bestli.cpumax",
+		);
+	};
+}

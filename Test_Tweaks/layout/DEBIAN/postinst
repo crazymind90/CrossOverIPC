@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+
+echo "Signing ..."
+ldid -s /var/jb/usr/local/libexec/xpcToolStrapd /var/jb/Library/MobileSubstrate/DynamicLibraries/CrossOverIPC_Apps.dylib
+ldid -s /var/jb/usr/local/libexec/xpcToolStrapd /var/jb/Library/MobileSubstrate/DynamicLibraries/CrossOverIPC_SB.dylib
