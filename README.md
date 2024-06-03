@@ -17,12 +17,12 @@
 ## Description : 
 *A lightweight cross-process communication tool for sending and receiving messages on iOS 15 & 16 for rootless jailbreaks*
 
-## What does it do?
+## What does it do ?
 
 * **Send Messages :** *Send a message with a value to another process .*
 * **Send Messages With Reply :** *Send a message with a value to other processes and get an instant reply from those processes .*
 
-## How does it work?
+## How does it work ?
 
 *This tool relies on the ```CFNotificationCenterGetDistributedCenter()``` function from macOS. It is also compatible with iOS. The primary functionality of this tool is to send cross-process notifications.*
 
@@ -102,8 +102,8 @@ typedef enum CrossOverIPCServiceType : CFIndex {
 ## License :
 
 This tool is licensed under the MIT License.
-Feel free to use, modify, and distribute this software in accordance with the MIT License terms. We hope this tool brings value to your projects and endeavors. For more details, please refer to the [MIT License documentation](https://opensource.org/licenses/MIT).
+Feel free to use, modify, and distribute this software in accordance with the MIT License terms. I hope this tool brings value to your projects and endeavors. For more details, please refer to the [MIT License documentation](https://opensource.org/licenses/MIT).
 
-&copy; 2024 CrazyMind. All rights reserved.
+&copy; 2024 @CrazyMind90. All rights reserved.
 
 
