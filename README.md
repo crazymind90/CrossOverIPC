@@ -24,9 +24,12 @@
 
 ## How does it work?
 
-*It depends on the ```CFNotificationCenterGetDistributedCenter()``` function from macOS.*
-*Yes, it does also work on iOS. Its main functionality is to send cross-process notifications.*
-*Since ```CPDistributedMessagingCenter``` is restricted, I made its methods using the CF function.*
+*This tool relies on the ```CFNotificationCenterGetDistributedCenter()``` function from macOS. It is also compatible with iOS. The primary functionality of this tool is to send cross-process notifications.*
+
+*Given the restrictions on ```CPDistributedMessagingCenter```, I have implemented its methods using the ```CFNotificationCenterGetDistributedCenter()``` function. This approach ensures that cross-process communication is possible even under the limitations imposed by the platform.*
+
+*By leveraging this functionality, developers can efficiently send notifications across different processes, enhancing the ```IPC``` capabilities of their tweaks.*
+
 
 ## Header file : 
 
@@ -90,13 +93,17 @@ typedef enum CrossOverIPCServiceType : CFIndex {
 
 
 
-## Important ..
+## Important :
 * `ServiceName` must be the same in [Poster] and [Client] .
 
 
 
-<br></br>
 
+## License :
 
+This tool is licensed under the MIT License.
+Feel free to use, modify, and distribute this software in accordance with the MIT License terms. We hope this tool brings value to your projects and endeavors. For more details, please refer to the [MIT License documentation](https://opensource.org/licenses/MIT).
+
+&copy; 2024 CrazyMind. All rights reserved.
 
 
