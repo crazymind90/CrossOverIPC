@@ -24,7 +24,7 @@
 
 ## How does it work ?
 
-*This tool relies on the ```CFNotificationCenterGetDistributedCenter()``` function from macOS. It is also compatible with iOS. The primary functionality of this tool is to send cross-process notifications.*
+*This tool relies on the ```CFNotificationCenterGetDistributedCenter()``` function from macOS. It is also compatible with iOS. The primary functionality of this func is to send cross-process notifications.*
 
 *Given the restrictions on ```CPDistributedMessagingCenter```, I have implemented its methods using the ```CFNotificationCenterGetDistributedCenter()``` function. This approach ensures that cross-process communication is possible even under the limitations imposed by the platform.*
 
